@@ -1,11 +1,7 @@
 //
 //  WeatherViewController.swift
 //  WeatherDemo
-//
-//  Created by Simon Ng on 27/10/2016.
-//  Updated by Simon Ng on 7/12/2017.
-//  Copyright © 2016 AppCoda. All rights reserved.
-//
+
 
 import UIKit
 import WeatherInfoKit
