@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="Weather_Widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMv-Gr-2fd">
+                                <rect key="frame" x="7" y="8" width="31" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31" id="H92-m8-K1N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhu-2I-7i6">
+                                <rect key="frame" x="159" y="8" width="65" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="2OS-Bf-IcN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIY-j0-FIm">
+                                <rect key="frame" x="262" y="8" width="43" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="qah-Ce-C5A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="zMv-Gr-2fd" firstAttribute="firstBaseline" secondItem="Nhu-2I-7i6" secondAttribute="firstBaseline" id="2Mm-xx-Vyt"/>
+                            <constraint firstItem="zMv-Gr-2fd" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="7" id="9qz-Xh-3so"/>
+                            <constraint firstItem="zMv-Gr-2fd" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="Qn0-tf-hu4"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="TIY-j0-FIm" secondAttribute="trailing" constant="15" id="TKb-uj-YfK"/>
+                            <constraint firstItem="zMv-Gr-2fd" firstAttribute="baseline" secondItem="Nhu-2I-7i6" secondAttribute="baseline" id="Ujd-4A-dly"/>
+                            <constraint firstItem="Nhu-2I-7i6" firstAttribute="baseline" secondItem="TIY-j0-FIm" secondAttribute="baseline" id="Uyg-VY-vIm"/>
+                            <constraint firstItem="TIY-j0-FIm" firstAttribute="leading" secondItem="Nhu-2I-7i6" secondAttribute="trailing" constant="38" id="XV0-Kg-IWf"/>
+                            <constraint firstItem="Nhu-2I-7i6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zMv-Gr-2fd" secondAttribute="trailing" constant="8" symbolic="YES" id="f2a-7Q-K8Q"/>
+                            <constraint firstItem="Nhu-2I-7i6" firstAttribute="firstBaseline" secondItem="TIY-j0-FIm" secondAttribute="firstBaseline" id="vit-Nz-22s"/>
+                            <constraint firstItem="zMv-Gr-2fd" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="8" id="zv3-lu-5Iw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="37"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="zMv-Gr-2fd" id="Txa-lS-POw"/>
+                        <outlet property="temperatureLabel" destination="TIY-j0-FIm" id="Jqt-Gt-RXM"/>
+                        <outlet property="weatherLabel" destination="Nhu-2I-7i6" id="4lL-x9-iHK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
